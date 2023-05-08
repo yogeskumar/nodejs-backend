@@ -6,6 +6,7 @@ const router = express.Router();
 
 // API endpoint for statistics
 router.get('/statistics/:month', async (req, res) => {
+    console.log("statistics api got hit")
     try {
         const { month } = req.params;
         const totalSaleAmount = await Product.aggregate([
@@ -34,6 +35,7 @@ router.get('/statistics/:month', async (req, res) => {
 
 // API endpoint for bar chart
 router.get('/bar-chart/:month', async (req, res) => {
+    console.log("bar chart api got hit")
     try {
         const { month } = req.params;
 
@@ -73,6 +75,7 @@ router.get('/bar-chart/:month', async (req, res) => {
 
 // API endpoint for pie chart
 router.get('/pie-chart/:month', async (req, res) => {
+    console.log("statistics api got hit")
     try {
         const { month } = req.params;
 
@@ -94,6 +97,7 @@ router.get('/pie-chart/:month', async (req, res) => {
 
 // API endpoint for combined data
 router.get('/combined-data/:month', async (req, res) => {
+    console.log("combined api got hit")
     try {
         const { month } = req.params;
 
